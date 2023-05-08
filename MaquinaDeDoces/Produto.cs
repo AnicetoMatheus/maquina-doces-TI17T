@@ -141,7 +141,7 @@ namespace MaquinaDeDoces
         } // fim do metodo consultar produto 
 
         //inicio metodo atualizar produto
-        public Boolean AtualizarProduto(int codigo, string campo, string novoDado)
+        public Boolean AtualizarProduto(int codigo, int campo, string novoDado)
         {
             Boolean flag = false;
 
@@ -150,26 +150,26 @@ namespace MaquinaDeDoces
             {
                 switch (campo)
                 {
-                    case "1":
+                    case 1:
                         ModificarNome = novoDado;
                         flag = true;
                         break;
 
-                    case "2":
+                    case 2:
                         ModificarDescricao = novoDado;
                         flag = true;
                         break;
 
-                    case "3":
+                    case 3:
                         ModificarPreco = Convert.ToDouble(novoDado);
                         flag = true;
                         break;
 
-                    case "4":
+                    case 4:
                         ModificarQuantidade = Convert.ToInt32(novoDado);
                         flag = true;
                         break;
-                    case "5":
+                    case 5:
                         ModificardtValidade = Convert.ToDateTime(novoDado);
                         flag = true;
                         break;
@@ -228,7 +228,9 @@ namespace MaquinaDeDoces
             return false;
         }// fim solicitar produtos
 
-
-
+        internal void AlterarSituacao(int codigo)
+        {
+            throw new NotImplementedException();
+        }
     }//fim da classe 
 }// fim do projeto 
