@@ -25,7 +25,7 @@ namespace MaquinaDeDoces
         }// fim do modo get set 
         public void menu()
         {
-            
+
 
             Console.WriteLine("\n\n\n escolha uma das opções abaixo \n" +
                 "0. sair\n" +
